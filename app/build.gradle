@@ -1,8 +1,7 @@
 apply plugin: 'android'
-
 android {
-    compileSdkVersion 15
-    buildToolsVersion "20.0.0"
+    compileSdkVersion 21
+    buildToolsVersion '21.0.2'
 
     defaultConfig {
         applicationId "com.lightbox.android.photoprocessing"
@@ -16,8 +15,11 @@ android {
 
     buildTypes {
         release {
-            runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            minifyEnabled true
         }
     }
+}
+
+dependencies {
 }
